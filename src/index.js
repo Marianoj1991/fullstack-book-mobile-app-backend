@@ -16,6 +16,9 @@ app.use(express.static('public'));
 app.use(cookieParser());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.status(200);
+});
 app.use('/api/auth', authRouter);
 app.use('/api/books', bookRouter);
 
