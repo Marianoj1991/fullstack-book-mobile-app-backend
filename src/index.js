@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.status(200);
+  res.status(200).send('OK');
 });
 app.use('/api/auth', authRouter);
 app.use('/api/books', bookRouter);
